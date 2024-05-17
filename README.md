@@ -1,17 +1,17 @@
 # GEOL0069_Project
 
   <!-- DESCRIPTION -->
-### Project Description
+## Project Description
 
 The goal for this project is to use artificial intelligence to train a model for sea ice roughness using RMS calculations for DEMs from drone-based photogrammetry data and HH backscatter Sentinel-1. The _project.ipynb_ notebook linked to this Github builds on the nmethods taught in the GEOL0069 Artificial Intelligence for Earth Observation module.
 
-</p>
+
 
   <!-- CONTEXT -->
-### Context
+## Context
 
   <!-- GETTING STARTED -->
-### Prerequisites
+## Prerequisites
 
 The following software needs to be installed to run the code.
 * Mounting Google Drive on Google Colab
@@ -34,7 +34,7 @@ The following software needs to be installed to run the code.
   ```
 
   <!-- DATA -->
-### Fetching Data
+## Fetching Data
 
 Define functions to get access tokens and download products by name from the Copernicus Data Space Ecosystem.
 
@@ -48,16 +48,16 @@ product_names = [
 ]
 ```
 
-## Pre-processing
+### Pre-processing
 
 The pre-processing of the Sentinel-1 data was carried out using the Sentinel Application Platform or SNAP by the European Space Agency. The steps included applying orbit files, thermal noise removal, calibration, a speckle-filter and ellipsoid correction. A subset was also defined over the area of interest.
 
-## Converting .tif files to .npy data
+### Converting .tif files to .npy data
 
 A function is defined using GDAL to open the file, read the raster data as an array, calculate the X and Y coordinates for the associated pixel values, and export and save the X, Y and Z arrays, which in other words are the longitude, latitude and Sentinel-1 brightness values.
 
   <!-- DEM -->
-### Calculating RMS from the photogrammetry DEMs
+## Calculating RMS from the photogrammetry DEMs
 
 Using a grid-size of 20 metres in order to have a few points per Sentinel-1 40x40m pixel
 
@@ -66,7 +66,7 @@ Using a grid-size of 20 metres in order to have a few points per Sentinel-1 40x4
 Using KD-trees...
 
   <!-- REGRESSION -->
-### Testing different regression types
+## Testing different regression types
 
 * Polynomial Regression:
 * Neural Network Regression:
@@ -74,20 +74,20 @@ Using KD-trees...
 * Gaussian Process Regression with GPSat:
 
   <!-- MODEL ROLLOUT -->
-### Using the polynomial model over sea ice
-## Pond Inlet
+## Using the polynomial model over sea ice
+### Pond Inlet
 
 ...
 
-## Cambridge Bay
+### Cambridge Bay
 
 ...
 
-## Other?
+### Other?
 
 ...
 
   <!-- SENSITIVITY -->
-### Sensitivity of predictions across the DEMs
+## Sensitivity of predictions across the DEMs
 
 
