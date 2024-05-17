@@ -52,6 +52,15 @@ The pre-processing of the Sentinel-1 data was carried out using the Sentinel App
 
 ## Converting .tif files to .npy data
 
+A function is defined using GDAL to open the file, read the raster data as an array, calculate the X and Y coordinates for the associated pixel values, and export and save the X, Y and Z arrays, which in other words are the longitude, latitude and Sentinel-1 brightness values.
+
+<!-- DEM -->
+### Colocating Sentinel-1 and DEM data
+
+
+
+<!-- REGRESSION -->
+### Testing different regression types
 
 
 
