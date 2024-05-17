@@ -79,6 +79,8 @@ Using KD-trees...
 * Gaussian Process Regression with GPy:
 * Gaussian Process Regression with GPSat:
 
+![AI diagram](AI_diagram.png)
+
   <!-- MODEL ROLLOUT -->
 ## Using the polynomial model over sea ice
 ### Pond Inlet
