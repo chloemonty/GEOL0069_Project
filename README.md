@@ -75,15 +75,15 @@ Using KD-trees...
 ### Using the polynomial model over sea ice
 ## Pond Inlet
 
-
+...
 
 ## Cambridge Bay
 
-
+...
 
 ## Other?
 
-
+...
 
 <!-- SENSITIVITY -->
 ### Sensitivity of predictions across the DEMs
