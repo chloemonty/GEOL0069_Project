@@ -8,6 +8,11 @@ The goal for this project is to use artificial intelligence to train a model for
   <!-- CONTEXT -->
 ## Context
 
+Surface roughness is defined as deviations in height along a surface at a particular reference level; the roughness of natural surfaces is determined by the different scales of roughness that are superimposed (Cafarella et al., 2019). Sea ice roughness is a parameter...
+
+Sentinel-1...
+
+Photogrammetry...
 
 ![EO diagram](EO_diagram.png)
 
@@ -90,5 +95,10 @@ Using KD-trees...
 
   <!-- SENSITIVITY -->
 ## Sensitivity of predictions across the DEMs
+
+
+
+<!-- REFERENCES -->
+## References
 
 
