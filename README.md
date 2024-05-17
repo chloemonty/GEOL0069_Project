@@ -14,7 +14,7 @@ Sentinel-1...
 
 Photogrammetry...
 
-<img src="EO_diagram.png" width="1000" height="1000">
+![EO diagram](EO_diagram.png)
 
   <!-- GETTING STARTED -->
 ## Prerequisites
