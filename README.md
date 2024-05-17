@@ -55,14 +55,37 @@ The pre-processing of the Sentinel-1 data was carried out using the Sentinel App
 A function is defined using GDAL to open the file, read the raster data as an array, calculate the X and Y coordinates for the associated pixel values, and export and save the X, Y and Z arrays, which in other words are the longitude, latitude and Sentinel-1 brightness values.
 
 <!-- DEM -->
+### Calculating RMS from the photogrammetry DEMs
+
+Using a grid-size of 20 metres in order to have a few points per Sentinel-1 40x40m pixel
+
 ### Colocating Sentinel-1 and DEM data
 
-
+Using KD-trees...
 
 <!-- REGRESSION -->
 ### Testing different regression types
 
+* Polynomial Regression:
+* Neural Network Regression:
+* Gaussian Process Regression with GPy:
+* Gaussian Process Regression with GPSat:
+
+<!-- POND INLET -->
+### Using the polynomial model over sea ice
+## Pond Inlet
 
 
+
+## Cambridge Bay
+
+
+
+## Other?
+
+
+
+<!-- SENSITIVITY -->
+### Sensitivity of predictions across the DEMs
 
 
