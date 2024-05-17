@@ -63,12 +63,14 @@ The pre-processing of the Sentinel-1 data was carried out using the Sentinel App
 A function is defined using GDAL to open the file, read the raster data as an array, calculate the X and Y coordinates for the associated pixel values, and export and save the X, Y and Z arrays, which in other words are the longitude, latitude and Sentinel-1 brightness values.
 
 DEM files:
-* 2023-04-18_s7grid300_dsm_wav_dem_a10_z10_clip.tif
-* 2023-04-19_s1grid300_dsm_wav_dem_a10_z10_clip.tif
-* 2023-04-20_s3grid300_dsm_wav_dem_a10_z10_clip.tif
-* 2023-04-21_s2grid300_dsm_wav_dem_a10_z10_clip.tif
-* 2023-04-22_s5grid300_dsm_wav_dem_a10_z10_clip.tif
-* 2023-04-22_s6grid300_dsm_wav_dem_a10_z10_clip.tif
+```sh
+2023-04-18_s7grid300_dsm_wav_dem_a10_z10_clip.tif
+2023-04-19_s1grid300_dsm_wav_dem_a10_z10_clip.tif
+2023-04-20_s3grid300_dsm_wav_dem_a10_z10_clip.tif
+2023-04-21_s2grid300_dsm_wav_dem_a10_z10_clip.tif
+2023-04-22_s5grid300_dsm_wav_dem_a10_z10_clip.tif
+2023-04-22_s6grid300_dsm_wav_dem_a10_z10_clip.tif
+```
 
   <!-- DEM -->
 ## Calculating RMS from the photogrammetry DEMs
