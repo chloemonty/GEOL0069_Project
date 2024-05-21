@@ -11,7 +11,11 @@ Sentinel-1 is a radar imaging mission that was launched by the European Space Ag
 
 Sentinel-1 HH backscatter has been shown in the past to be related to sea ice roughness in studies such the one conducted by Segal et al. (2020).
 
-Photogrammetry...
+In this project, root mean square (RMS) calculations over photogrammetry-derived digital elevation models (DEMs) are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The data used to produce these DEMs comes from a locality called Pond Inlet in the Canadian Arctic.
+
+The regression model trained using data over Pond Inlet is also applied here to the localities of Cambridge Bay and Arctic Bay.
+
+See the diagram below for...
 
 ![EO diagram](EO_diagram.png)
 
