@@ -7,7 +7,9 @@ The goal for this project is to use artificial intelligence to train a model for
 
 Surface roughness is defined as deviations in height along a surface at a particular reference level; the roughness of natural surfaces is determined by the different scales of roughness that are superimposed (Cafarella et al., 2019). Sea ice roughness is a parameter that is used in scientific studies on the atmosphere and the ocean due to its relation to momentum, to help predict summer melt ponds and the annual minimum extent of sea ice, as well as more practical applications such as for sea ice travel for indigenous communities and the navigability of the Arctic Ocean by cargo ships (johnson et al., 2022).
 
-Sentinel-1...
+Sentinel-1 is a radar imaging mission that was launched by the European Space Agency in 2014, which is polar-orbiting and made up of two satellites, Sentinel-1A and B (ESA, n.d.). It is an active sensor that uses a C-band synthetic aperture radar, and its central frequency of 5.405 GHz allows it to collect images of the surface of the Earth at all times, regardless of changes in weather or light conditions (Filipponi, 2019).
+
+Sentinel-1 HH backscatter has been shown in the past to be related to sea ice roughness in studies such the one conducted by Segal et al. (2020).
 
 Photogrammetry...
 
@@ -113,6 +115,12 @@ Using KD-trees...
 ## References
 
 Cafarella, S., Scharien, R. K., Geldsetzer, T., Howell, S. B., Haas, C., Segal, R., & Nasonova, S. (2019). Estimation of Level and Deformed First-Year Sea Ice Surface Roughness in the Canadian Arctic Archipelago from C- and L-Band Synthetic Aperture Radar. Canadian Journal of Remote Sensing, 45(3-4), 457–475. https://doi.org/10.1080/07038992.2019.1647102
+
+European Space Agency (ESA). (n.d.). The Sentinel Missions. Www.esa.int.
+https://www.esa.int/Applications/Observing_the_Earth/Copernicus/The_Sentinel_missions#:~:text=Sentinel%2D1%20is
+%20a%20polar
+
+Filipponi, F. (2019). Sentinel-1 GRD Preprocessing Workflow. Proceedings, 18(1), 11. https://doi.org/10.3390/ecrs-3-06201
 
 Johnson, T., Tsamados, M., Muller, J.-P., & Stroeve, J. (2022). Mapping Arctic Sea-Ice Surface Roughness with Multi-Angle
 Imaging SpectroRadiometer. Remote Sensing, 14(24), 6249–6249. https://doi.org/10.3390/rs14246249
