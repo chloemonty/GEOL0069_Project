@@ -9,7 +9,7 @@ Surface roughness is defined as deviations in height along a surface at a partic
 
 Sentinel-1 is a radar imaging mission that was launched by the European Space Agency in 2014, which is polar-orbiting and made up of two satellites, Sentinel-1A and B (ESA, n.d.-a). It is an active sensor that uses a C-band synthetic aperture radar, and its central frequency of 5.405 GHz allows it to collect images of the surface of the Earth at all times, regardless of changes in weather or light conditions (Filipponi, 2019). Sentinel-1 has different product types, acquisition modes and polarisations which can be used for different applications; the settings used for the Sentinel-1 swaths included in this project are ground range detected (GRD) products, extra-wide swath (EW) and single HH polarisation as they are ideal for sea-ice monitoring (ESA, n.d.-a).
 
-Sentinel-1 HH backscatter has been shown in the past to be related to sea ice roughness in studies such the one conducted by Segal et al. (2020).
+Sentinel-1 HH backscatter has been shown in the past to be related to sea ice roughness in studies such the one conducted by Segal et al. (2020) and ...
 
 In this project, root mean square (RMS) calculations over photogrammetry-derived digital elevation models (DEMs) are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The data used to produce these DEMs comes from a locality called Pond Inlet in the Canadian Arctic.
 
