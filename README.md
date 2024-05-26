@@ -143,6 +143,7 @@ X_poly_test = polynomial_features.transform(X_test)
 ```
 
 The Mean Squared Error (MSE) on the test set is: 0.1048.
+
 ![Polynomial regression](polynomial_regression.png)
 
 * Neural Network Regression: using Sequential and Dense from tensorflow
@@ -162,6 +163,7 @@ model_nn.fit(X_train, y_train, epochs=20)
 ```
 
 The Mean Squared Error (MSE) on the test set is: 0.1293.
+
 ![NN regression](NN_regression.png)
 
 * Gaussian Process Regression with GPy: using SparseGPRegression from GPy
@@ -177,6 +179,7 @@ gp.optimize(messages=True)
 ```
 
 The Mean Squared Error (MSE) on the test set is: 0.1293.
+
 ![GPy regression](GPy_regression.png)
 
 * Gaussian Process Regression with GPSat: using sklearnGPRModel from GPSat (a repository needs to be prepared in order to use GPSat and pip install needs to be used to install the requirements and GPSat itself to Google Colab)
@@ -195,15 +198,21 @@ See the diagram below which illustrates the AI algorithm/methods used and their 
 ## Using the polynomial model over sea ice
 ### Pond Inlet
 
-...
+Predicted RMS using the 2-D polynomial over sea ice with the predicted 0 brightness values masked over Pond Inlet. Most values are between 0.3 to 0.6, increasing in the east.
+
+![Pond_Inlet](pond_inlet.png)
 
 ### Cambridge Bay
 
-...
+Predicted RMS using the 2-D polynomial over sea ice with the predicted 0 brightness values masked over Cambridge Bay. Most values are between 0.3 to 0.7, increasing in the east.
+
+![Cambridge Bay](cambridge_bay.png)
 
 ### Arctic Bay
 
-...
+Predicted RMS using the 2-D polynomial over sea ice with the predicted 0 brightness values masked over Arctic Bay. Most values are between 0.3 to 0.5, increasing in the north.
+
+![Arctic Bay](arctic_bay.png)
 
   <!-- SENSITIVITY -->
 ## Sensitivity Analysis
