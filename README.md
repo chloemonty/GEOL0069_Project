@@ -16,7 +16,6 @@ The photogrammetry data used to produce the digital elevation models (DEMs) util
 In this project, root mean square (RMS) calculations over photogrammetry-derived DEMs are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The regression model trained using data over Pond Inlet is also applied here to the localities of Cambridge Bay and Arctic Bay.
 
 See the diagram below which illustrates the remote sensing techniques used here:
-
 ![EO diagram](EO_diagram.png)
 
   <!-- GETTING STARTED -->
@@ -85,7 +84,6 @@ DEM files:
 Three different roughness metrics were calculated and compared to select the one with the strongest relationship with the HH brightness and that most accurately captured the sea ice roughness. These metrics were range, standard deviation and RMS, which was ultimately selected for the regression models; they were initially calculated using a grid-size of 40 metres pixels to match the Sentinel-1 40x40m swath pixel size. The RMS was also calculated over a grid-size of 20 metres in order to have a higher number of datapoints to use for the regression.
 
 For example, here were the steps to calculate RMS over a 20m grid-size:
-
 ```sh
 ## Calculate RMS by binning longitude and latitude into grid cells and save as .npy format
 
@@ -124,14 +122,18 @@ These functions are available through scipy:
 from scipy.spatial import cKDTree
 ```
 
+### Scatter plots of HH brightness vs. different roughness metrics
+![Scatter plots](scatter_plots.png)
+
   <!-- REGRESSION -->
 ## Testing different regression types
 
-* Polynomial Regression:
+* Polynomial Regression: 
 * Neural Network Regression:
 * Gaussian Process Regression with GPy:
 * Gaussian Process Regression with GPSat:
 
+See the diagram below which illustrates the AI algorithm/methods used and their implementation:
 ![AI diagram](AI_diagram.png)
 
   <!-- MODEL ROLLOUT -->
