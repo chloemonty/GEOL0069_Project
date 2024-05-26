@@ -142,6 +142,7 @@ model_poly.fit(X_poly_train, y_train)
 X_poly_test = polynomial_features.transform(X_test)
 ```
 
+The Mean Squared Error (MSE) on the test set is: 0.1048.
 ![Polynomial regression](polynomial_regression.png)
 
 * Neural Network Regression: using Sequential and Dense from tensorflow
@@ -160,6 +161,7 @@ model_nn.compile(optimizer='adam', loss='mean_squared_error')
 model_nn.fit(X_train, y_train, epochs=20)
 ```
 
+The Mean Squared Error (MSE) on the test set is: 0.1293.
 ![NN regression](NN_regression.png)
 
 * Gaussian Process Regression with GPy: using SparseGPRegression from GPy
@@ -174,6 +176,7 @@ gp = GPy.models.SparseGPRegression(X_train, y_train.reshape(-1, 1), kernel, num_
 gp.optimize(messages=True)
 ```
 
+The Mean Squared Error (MSE) on the test set is: 0.1293.
 ![GPy regression](GPy_regression.png)
 
 * Gaussian Process Regression with GPSat: using sklearnGPRModel from GPSat (a repository needs to be prepared in order to use GPSat and pip install needs to be used to install the requirements and GPSat itself to Google Colab)
