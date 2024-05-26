@@ -242,6 +242,7 @@ Using a seed of 10, the average sensitivity scores are shown below:
 
 For more details on the the different sections of the code please see the video below:
 
+[![YouTube](http://i.ytimg.com/vi/CESpttSjAZk/hqdefault.jpg)](https://www.youtube.com/watch?v=CESpttSjAZk)
 
 <!-- REFERENCES -->
 ## References
