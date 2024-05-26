@@ -15,7 +15,7 @@ The photogrammetry data used to produce the digital elevation models (DEMs) util
 
 In this project, root mean square (RMS) calculations over photogrammetry-derived DEMs are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The regression model trained using data over Pond Inlet is also applied here to the localities of Cambridge Bay and Arctic Bay.
 
-See the diagram below which illustrates the remote sensing techniques used here.
+See the diagram below which illustrates the remote sensing techniques used here:
 
 ![EO diagram](EO_diagram.png)
 
@@ -80,9 +80,41 @@ DEM files:
 ```
 
   <!-- DEM -->
-## Calculating RMS from the photogrammetry DEMs
+## Colocate data and testing different roughness metrics
 
-Using a grid-size of 20 metres in order to have a few points per Sentinel-1 40x40m pixel
+Three different roughness metrics were calculated and compared to select the one with the strongest relationship with the HH brightness and that most accurately captured the sea ice roughness. These metrics were range, standard deviation and RMS, which was ultimately selected for the regression models; they were initially calculated using a grid-size of 40 metres pixels to match the Sentinel-1 40x40m swath pixel size. The RMS was also calculated over a grid-size of 20 metres in order to have a higher number of data points to use for the regression.
+
+For example, here were the steps to calculate RMS over a 20m grid-size:
+
+```sh
+## Calculate RMS by binning longitude and latitude into grid cells and save as .npy format
+
+# Define the size of the grid cells
+grid_size = 20  # metres
+# grid_size = 40  # metres
+
+# Define bins for lon/lat
+lon_bins = np.arange(min(lon_DEM_flat), max(lon_DEM_flat) + grid_size, grid_size)
+lat_bins = np.arange(min(lat_DEM_flat), max(lat_DEM_flat) + grid_size, grid_size)
+
+# Arrays to store RMS values and centre coordinates of bins
+rms_values = np.zeros((len(lat_bins) - 1, len(lon_bins) - 1))
+lon_centers = np.zeros((len(lat_bins) - 1, len(lon_bins) - 1))
+lat_centers = np.zeros((len(lat_bins) - 1, len(lon_bins) - 1))
+
+# Calculate RMS for each grid cell
+for i in range(len(lon_bins) - 1):
+    for j in range(len(lat_bins) - 1):
+        # Indices of points within each bin
+        indices = np.where((lon_DEM_flat >= lon_bins[i]) & (lon_DEM_flat < lon_bins[i+1]) &
+                           (lat_DEM_flat >= lat_bins[j]) & (lat_DEM_flat < lat_bins[j+1]))
+        elevations = elevation_flat[indices]
+        if elevations.size > 0:
+            rms_values[j, i] = np.sqrt(np.mean(np.square(elevations)))
+        # Calculate centre coordinates of each bin
+        lon_centers[j, i] = (lon_bins[i] + lon_bins[i + 1]) / 2
+        lat_centers[j, i] = (lat_bins[j] + lat_bins[j + 1]) / 2
+```
 
 ### Colocating Sentinel-1 and DEM data
 
@@ -108,12 +140,12 @@ Using KD-trees...
 
 ...
 
-### Other?
+### Arctic Bay
 
 ...
 
   <!-- SENSITIVITY -->
-## Sensitivity of predictions across the DEMs
+## Sensitivity Analysis
 
 
 
