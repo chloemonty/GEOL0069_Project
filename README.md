@@ -61,9 +61,9 @@ product_names = [
 
 The pre-processing of the Sentinel-1 data was carried out using the Sentinel Application Platform or SNAP by the European Space Agency. The steps included applying orbit files, thermal noise removal, calibration, a speckle-filter and ellipsoid correction. A subset was also defined over the area of interest.
 
-![SNAP](SNAP_processing_chain.png)
-
 _For more information on the individual pre-processing steps please visit the [Sentinel Toolbox Overview for SNAP](https://step.esa.int/main/doc/online-help/)._
+
+![SNAP](SNAP_processing_chain.png)
 
 ### Converting .tif files to .npy data
 
