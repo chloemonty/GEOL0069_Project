@@ -237,6 +237,12 @@ Using a seed of 10, the average sensitivity scores are shown below:
 
 ![Sensitivity](sensitivity.png)
 
+  <!-- VIDEO -->
+## Tutorial video
+
+For more details on the the different sections of the code please see the video below:
+
+
 <!-- REFERENCES -->
 ## References
 
