@@ -13,11 +13,9 @@ Sentinel-1 backscatter has been shown in the past to be related to sea ice rough
 
 The photogrammetry data used to produce the digital elevation models (DEMs) utilised here were taken between the 18th-22nd of April 2023 over Pond Inlet, in the Canadian Arctic, during a field campaign for _Sikuttiaq_, a project to improve sea ice travel safety maps in the area by the Canada-Inuit Nunangat-United Kingdom Arctic Programme’s (Newman et al., 2018; CINUK, n.d.).
 
-In this project, root mean square (RMS) calculations over photogrammetry-derived DEMs are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The data used to produce these DEMs comes from a locality called Pond Inlet in the Canadian Arctic.
+In this project, root mean square (RMS) calculations over photogrammetry-derived DEMs are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The regression model trained using data over Pond Inlet is also applied here to the localities of Cambridge Bay and Arctic Bay.
 
-The regression model trained using data over Pond Inlet is also applied here to the localities of Cambridge Bay and Arctic Bay.
-
-See the diagram below for...
+See the diagram below which illustrates the remote sensing techniques used here.
 
 ![EO diagram](EO_diagram.png)
 
@@ -64,6 +62,8 @@ product_names = [
 The pre-processing of the Sentinel-1 data was carried out using the Sentinel Application Platform or SNAP by the European Space Agency. The steps included applying orbit files, thermal noise removal, calibration, a speckle-filter and ellipsoid correction. A subset was also defined over the area of interest.
 
 ![SNAP](SNAP_processing_chain.png)
+
+_For more information on the individual pre-processing steps please visit the [Sentinel Toolbox Overview for SNAP](https://step.esa.int/main/doc/online-help/)._
 
 ### Converting .tif files to .npy data
 
