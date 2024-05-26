@@ -11,7 +11,9 @@ Sentinel-1 is a radar imaging mission that was launched by the European Space Ag
 
 Sentinel-1 backscatter has been shown in the past to be related to sea ice roughness in studies such the one conducted by Segal et al. (2020) and Chen et al. (2024). The single polarisation HH channel was selected on its own over using it in combination with the HV channel due to the noisy artefacts that are visible in sub-swaths of the EW mode.
 
-In this project, root mean square (RMS) calculations over photogrammetry-derived digital elevation models (DEMs) are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The data used to produce these DEMs comes from a locality called Pond Inlet in the Canadian Arctic.
+The photogrammetry data used to produce the digital elevation models (DEMs) utilised here were taken between the 18th-22nd of April 2023 over Pond Inlet, in the Canadian Arctic, during a field campaign for _Sikuttiaq_, a project to improve sea ice travel safety maps in the area by the Canada-Inuit Nunangat-United Kingdom Arctic Programme’s (Newman et al., 2018; CINUK, n.d.).
+
+In this project, root mean square (RMS) calculations over photogrammetry-derived DEMs are colocated with HH brightness datapoints in order to produce a regression model between the two and predict sea ice roughness based on HH backscatter. The data used to produce these DEMs comes from a locality called Pond Inlet in the Canadian Arctic.
 
 The regression model trained using data over Pond Inlet is also applied here to the localities of Cambridge Bay and Arctic Bay.
 
@@ -120,6 +122,8 @@ Using KD-trees...
 
 Cafarella, S., Scharien, R. K., Geldsetzer, T., Howell, S. B., Haas, C., Segal, R., & Nasonova, S. (2019). Estimation of Level and Deformed First-Year Sea Ice Surface Roughness in the Canadian Arctic Archipelago from C- and L-Band Synthetic Aperture Radar. Canadian Journal of Remote Sensing, 45(3-4), 457–475. https://doi.org/10.1080/07038992.2019.1647102
 
+Canada-Inuit Nunangat-United Kingdom Arctic Research Programme (CINUK). (n.d.). Sikuttiaq - Sea ice travel safety, Inuit Qaujimajatuqangit, sea ice monitoring. CINUK. https://www.cinuk.org/projects/sikuttiaq/
+
 Chen, P., Chen, Z., Sun, R., & He, Y. (2024). An ensemble learning method to retrieve sea ice roughness from Sentinel-1 SAR images. Acta Oceanologica Sinica, 43, 1-13. 
 
 European Space Agency (ESA). (n.d.-a). The Sentinel Missions. Www.esa.int.
@@ -133,4 +137,7 @@ Filipponi, F. (2019). Sentinel-1 GRD Preprocessing Workflow. Proceedings, 18(1),
 
 Johnson, T., Tsamados, M., Muller, J.-P., & Stroeve, J. (2022). Mapping Arctic Sea-Ice Surface Roughness with Multi-Angle
 Imaging SpectroRadiometer. Remote Sensing, 14(24), 6249–6249. https://doi.org/10.3390/rs14246249
+
+Newman, T., Arreak, A., Tsamados, M., Briggs, R., Thibault, C., & Blanco-Cabanillas , A. (2024). A (low cost) drone
+photogrammetry workflow for sea ice roughness extraction. Sikuttiaq Presentation.
 
