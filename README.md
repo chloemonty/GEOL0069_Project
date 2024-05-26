@@ -217,7 +217,25 @@ Predicted RMS using the 2-D polynomial over sea ice with the predicted 0 brightn
   <!-- SENSITIVITY -->
 ## Sensitivity Analysis
 
+The average sensitivity of a number of models with the 6 different DEM grids as different features is calculated using a CNN model architecture for reusability and a specified seed for reproducibility. A sensitivity analysis function is defined using tensorflow.
 
+```sh
+# Sensitivity analysis function
+def sensitivity_analysis(model, input_data, class_idx):
+    input_data_tensor = tf.convert_to_tensor(input_data, dtype=tf.float32)
+    with tf.GradientTape() as tape:
+        tape.watch(input_data_tensor)
+        predictions = model(input_data_tensor, training=False)
+        class_output = predictions[:, class_idx]
+
+    gradients = tape.gradient(class_output, input_data_tensor)
+    feature_sensitivity = tf.reduce_sum(tf.abs(gradients), axis=0)
+    return feature_sensitivity.numpy()
+```
+
+Using a seed of 10, the average sensitivity scores are shown below:
+
+![Sensitivity](sensitivity.png)
 
 <!-- REFERENCES -->
 ## References
