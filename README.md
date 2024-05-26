@@ -82,7 +82,7 @@ DEM files:
   <!-- DEM -->
 ## Colocate data and testing different roughness metrics
 
-Three different roughness metrics were calculated and compared to select the one with the strongest relationship with the HH brightness and that most accurately captured the sea ice roughness. These metrics were range, standard deviation and RMS, which was ultimately selected for the regression models; they were initially calculated using a grid-size of 40 metres pixels to match the Sentinel-1 40x40m swath pixel size. The RMS was also calculated over a grid-size of 20 metres in order to have a higher number of data points to use for the regression.
+Three different roughness metrics were calculated and compared to select the one with the strongest relationship with the HH brightness and that most accurately captured the sea ice roughness. These metrics were range, standard deviation and RMS, which was ultimately selected for the regression models; they were initially calculated using a grid-size of 40 metres pixels to match the Sentinel-1 40x40m swath pixel size. The RMS was also calculated over a grid-size of 20 metres in order to have a higher number of datapoints to use for the regression.
 
 For example, here were the steps to calculate RMS over a 20m grid-size:
 
@@ -91,7 +91,6 @@ For example, here were the steps to calculate RMS over a 20m grid-size:
 
 # Define the size of the grid cells
 grid_size = 20  # metres
-# grid_size = 40  # metres
 
 # Define bins for lon/lat
 lon_bins = np.arange(min(lon_DEM_flat), max(lon_DEM_flat) + grid_size, grid_size)
@@ -118,7 +117,12 @@ for i in range(len(lon_bins) - 1):
 
 ### Colocating Sentinel-1 and DEM data
 
-Using KD-trees...
+KD-trees were used in this project to colocate the Sentinel-1 HH brightness and DEM datapoints. First, a KD-tree was created using the Sentinel-1 data, and then the tree was queried to find the nearest point in the Sentinel-1 data for each point in the DEM datasets for each roughness metric used.
+
+These functions are available through scipy:
+```sh
+from scipy.spatial import cKDTree
+```
 
   <!-- REGRESSION -->
 ## Testing different regression types
