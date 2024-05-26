@@ -128,10 +128,62 @@ from scipy.spatial import cKDTree
   <!-- REGRESSION -->
 ## Testing different regression types
 
-* Polynomial Regression: 
-* Neural Network Regression:
-* Gaussian Process Regression with GPy:
-* Gaussian Process Regression with GPSat:
+* Polynomial Regression: using PolynomialFeatures and LinearRegression from sklearn
+```sh
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+
+polynomial_features = PolynomialFeatures(degree=2)
+X_poly_train = polynomial_features.fit_transform(X_train)
+
+model_poly = LinearRegression()
+model_poly.fit(X_poly_train, y_train)
+
+X_poly_test = polynomial_features.transform(X_test)
+```
+
+![Polynomial regression](polynomial_regression.png)
+
+* Neural Network Regression: using Sequential and Dense from tensorflow
+```sh
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+model_nn = Sequential([
+    Dense(256, activation='relu', input_shape=(1,)),
+    Dense(1)
+])
+
+model_nn.compile(optimizer='adam', loss='mean_squared_error')
+
+model_nn.fit(X_train, y_train, epochs=20)
+```
+
+![NN regression](NN_regression.png)
+
+* Gaussian Process Regression with GPy: using SparseGPRegression from GPy
+```sh
+import GPy
+
+kernel = GPy.kern.RBF(input_dim=1)
+num_inducing = 100
+
+gp = GPy.models.SparseGPRegression(X_train, y_train.reshape(-1, 1), kernel, num_inducing=num_inducing)
+
+gp.optimize(messages=True)
+```
+
+![GPy regression](GPy_regression.png)
+
+* Gaussian Process Regression with GPSat: using sklearnGPRModel from GPSat (a repository needs to be prepared in order to use GPSat and pip install needs to be used to install the requirements and GPSat itself to Google Colab)
+```sh
+from GPSat.models.sklearn_models import sklearnGPRModel
+
+gpr = sklearnGPRModel(coords=X_test, obs=y_test, kernel='RBF', verbose=False)
+```
+
+![GPSat regression](GPSat_regression.png)
 
 See the diagram below which illustrates the AI algorithm/methods used and their implementation:
 ![AI diagram](AI_diagram.png)
